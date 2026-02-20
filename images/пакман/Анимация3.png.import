@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bh457chwglb7h"
+=======
+uid="uid://clmptrbleckun"
+>>>>>>> kruzka
 path="res://.godot/imported/Анимация3.png-61f8c006b8b735c63a52bf53eb31833b.ctex"
 metadata={
 "vram_texture": false

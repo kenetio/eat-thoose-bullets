@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dvkkwvbai6see"
+=======
+uid="uid://cb6rro7kpgqe3"
+>>>>>>> kruzka
 path="res://.godot/imported/пулька врагов.png-e8e49f205f5612c0e3081f8fffc895cd.ctex"
 metadata={
 "vram_texture": false
