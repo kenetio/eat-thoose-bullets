@@ -6,6 +6,8 @@ var speed = 500.0
 var lastdirx : int = 0
 var lastdiry : int = 0
 
+var max_bullets : int = 5
+var bullets : int = 0
 
 func _physics_process(_delta: float) -> void:
 	match state:
@@ -26,6 +28,7 @@ func move() -> void:
 		lastdiry = diry
 		lastdirx = 0
 		$AnimatedSprite2D.rotation = deg_to_rad(90)
+		$Bullets_eating_area.rotation = deg_to_rad(90*lastdiry)
 		if diry<0:
 			$AnimatedSprite2D.flip_h = true
 		else:
@@ -41,6 +44,7 @@ func move() -> void:
 		lastdirx = dirx
 		lastdiry = 0
 		$AnimatedSprite2D.rotation = deg_to_rad(0)
+		$Bullets_eating_area.rotation = deg_to_rad(90-90*lastdirx)
 		if dirx<0:
 			$AnimatedSprite2D.flip_h = true
 		else:
@@ -69,4 +73,12 @@ func shield() -> void:
 	untwin.tween_property($Shield, 'modulate:a', 0, 0.3)
 	$ProgressBar.value = 100
 	$ProgressBar.visible = true
+	$Bullets_eating_area.monitoring = true
 	
+
+
+func _on_bullets_eating_area_area_entered(area: Area2D) -> void:
+	if bullets < max_bullets:
+		area.queue_free()
+		bullets += 1
+	print(bullets)
