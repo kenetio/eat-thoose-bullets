@@ -97,7 +97,7 @@ show_percentage = false
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_hka3a")
 animation = &"Fast_eating"
-frame_progress = 0.2560457
+frame_progress = 0.010572788
 
 [node name="Bullets_eating_area" type="Area2D" parent="." unique_id=1032721618]
 monitoring = false

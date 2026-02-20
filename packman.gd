@@ -6,6 +6,8 @@ var speed = 500.0
 var lastdirx : int = 0
 var lastdiry : int = 0
 
+var max_bullets : int = 5
+var bullets : int = 0
 
 func _physics_process(_delta: float) -> void:
 	match state:
