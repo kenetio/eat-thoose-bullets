@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjmssonrfo3wr"
-path="res://.godot/imported/Анимация2.png-df24b2d4f36bbe9cd0638d7a12b85152.ctex"
+uid="uid://cb6rro7kpgqe3"
+path="res://.godot/imported/пулька врагов.png-e8e49f205f5612c0e3081f8fffc895cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/пакман/Анимация2.png"
-dest_files=["res://.godot/imported/Анимация2.png-df24b2d4f36bbe9cd0638d7a12b85152.ctex"]
+source_file="res://images/боссы/пулька врагов.png"
+dest_files=["res://.godot/imported/пулька врагов.png-e8e49f205f5612c0e3081f8fffc895cd.ctex"]
 
 [params]
 
