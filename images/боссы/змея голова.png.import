@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hq2xrry2bce4"
-path="res://.godot/imported/Анимация4.png-6228448c1c7d9a9dbf52301cbb803190.ctex"
+uid="uid://cnxrrqpleqgxt"
+path="res://.godot/imported/змея голова.png-8463b1a509c1ea8a88562cddd6d31316.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/пакман/Анимация4.png"
-dest_files=["res://.godot/imported/Анимация4.png-6228448c1c7d9a9dbf52301cbb803190.ctex"]
+source_file="res://images/боссы/змея голова.png"
+dest_files=["res://.godot/imported/змея голова.png-8463b1a509c1ea8a88562cddd6d31316.ctex"]
 
 [params]
 
