@@ -26,13 +26,48 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_vylnx")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("5_58we8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vylnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y622x")
 }],
 "loop": true,
 "name": &"Eating",
-"speed": 5.0
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sr2kd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y622x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vylnx")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_58we8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vylnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y622x")
+}],
+"loop": true,
+"name": &"Fast_eating",
+"speed": 20.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sr2kd"]
+size = Vector2(66, 100)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sr2kd"]
+radius = 50.0
 
 [node name="Packman" type="CharacterBody2D" unique_id=1301623657]
 script = ExtResource("1_hka3a")
@@ -61,4 +96,17 @@ show_percentage = false
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=280315759]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_hka3a")
-animation = &"Eating"
+animation = &"Fast_eating"
+frame_progress = 0.2560457
+
+[node name="Bullets_eating_area" type="Area2D" parent="." unique_id=1032721618]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bullets_eating_area" unique_id=1093548744]
+position = Vector2(27, 0)
+shape = SubResource("RectangleShape2D_sr2kd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1279362989]
+shape = SubResource("CircleShape2D_sr2kd")
+
+[connection signal="area_entered" from="Bullets_eating_area" to="." method="_on_bullets_eating_area_area_entered"]

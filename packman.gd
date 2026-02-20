@@ -26,6 +26,7 @@ func move() -> void:
 		lastdiry = diry
 		lastdirx = 0
 		$AnimatedSprite2D.rotation = deg_to_rad(90)
+		$Bullets_eating_area.rotation = deg_to_rad(90*lastdiry)
 		if diry<0:
 			$AnimatedSprite2D.flip_h = true
 		else:
@@ -41,6 +42,7 @@ func move() -> void:
 		lastdirx = dirx
 		lastdiry = 0
 		$AnimatedSprite2D.rotation = deg_to_rad(0)
+		$Bullets_eating_area.rotation = deg_to_rad(90-90*lastdirx)
 		if dirx<0:
 			$AnimatedSprite2D.flip_h = true
 		else:
@@ -70,3 +72,7 @@ func shield() -> void:
 	$ProgressBar.value = 100
 	$ProgressBar.visible = true
 	
+
+
+func _on_bullets_eating_area_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.
