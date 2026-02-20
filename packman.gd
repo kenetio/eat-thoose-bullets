@@ -25,11 +25,16 @@ func move() -> void:
 		velocity.x = 0
 		lastdiry = diry
 		lastdirx = 0
-		$AnimatedSprite2D.rotation = deg_to_rad(90*lastdirx)
+		$AnimatedSprite2D.rotation = deg_to_rad(90)
 		if diry<0:
 			$AnimatedSprite2D.flip_h = true
 		else:
 			$AnimatedSprite2D.flip_h = false
+		match lastdirx:
+			-1:
+				$AnimatedSprite2D.flip_v = false
+			1:
+				$AnimatedSprite2D.flip_v = true
 	if dirx:
 		velocity.x = speed*dirx
 		velocity.y = 0

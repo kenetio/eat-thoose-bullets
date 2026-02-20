@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://b2s21onijqwbx"]
 
 [ext_resource type="Script" uid="uid://bhhs63yvkrw2n" path="res://packman.gd" id="1_hka3a"]
-[ext_resource type="Texture2D" uid="uid://dl10a8mr4l412" path="res://images/пакман/Анимация1.png" id="2_sr2kd"]
-[ext_resource type="Texture2D" uid="uid://bwqma4g4bf7d3" path="res://images/пакман/Анимация2.png" id="3_y622x"]
-[ext_resource type="Texture2D" uid="uid://dhbkbc2ckap7w" path="res://images/пакман/Анимация3.png" id="4_vylnx"]
-[ext_resource type="Texture2D" uid="uid://0duo48wef73" path="res://images/пакман/Анимация4.png" id="5_58we8"]
+[ext_resource type="Texture2D" uid="uid://c2g8crvlhegl8" path="res://images/пакман/Анимация1.png" id="2_sr2kd"]
+[ext_resource type="Texture2D" uid="uid://cjmssonrfo3wr" path="res://images/пакман/Анимация2.png" id="3_y622x"]
+[ext_resource type="Texture2D" uid="uid://clmptrbleckun" path="res://images/пакман/Анимация3.png" id="4_vylnx"]
+[ext_resource type="Texture2D" uid="uid://sn232o7snfpw" path="res://images/пакман/Анимация4.png" id="5_58we8"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hka3a"]
 width = 128
@@ -28,16 +28,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_58we8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_vylnx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_y622x")
 }],
 "loop": true,
 "name": &"Eating",
-"speed": 8.0
+"speed": 5.0
 }]
 
 [node name="Packman" type="CharacterBody2D" unique_id=1301623657]
@@ -48,7 +42,6 @@ visible = false
 texture = SubResource("NoiseTexture2D_hka3a")
 
 [node name="Shield" type="Sprite2D" parent="." unique_id=1216225154]
-visible = false
 modulate = Color(1, 1, 1, 0)
 texture = SubResource("NoiseTexture2D_x6jed")
 
@@ -69,4 +62,3 @@ show_percentage = false
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_hka3a")
 animation = &"Eating"
-autoplay = "Eating"
