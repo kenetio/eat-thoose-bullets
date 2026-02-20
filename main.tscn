@@ -6,10 +6,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [ext_resource type="AudioStream" uid="uid://cnm7yhbke8bks" path="res://untitled.mp3" id="3_h2yge"]
 =======
 [ext_resource type="PackedScene" uid="uid://dcte458lgy8er" path="res://boss_bullet.tscn" id="3_h2yge"]
 >>>>>>> kruzka
+=======
+>>>>>>> parent of 7fbcfd0 (вот пууульки)
 =======
 >>>>>>> parent of 7fbcfd0 (вот пууульки)
 =======
@@ -65,6 +68,7 @@ zoom = Vector2(0.75, 0.75)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=527031261]
 stream = ExtResource("3_h2yge")
@@ -93,6 +97,8 @@ position = Vector2(628, 279)
 [node name="Boss_bullet6" parent="." unique_id=1821271057 instance=ExtResource("3_h2yge")]
 position = Vector2(775, 269)
 >>>>>>> kruzka
+=======
+>>>>>>> parent of 7fbcfd0 (вот пууульки)
 =======
 >>>>>>> parent of 7fbcfd0 (вот пууульки)
 =======
