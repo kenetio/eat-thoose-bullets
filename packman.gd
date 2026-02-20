@@ -73,8 +73,12 @@ func shield() -> void:
 	untwin.tween_property($Shield, 'modulate:a', 0, 0.3)
 	$ProgressBar.value = 100
 	$ProgressBar.visible = true
+	$Bullets_eating_area.monitoring = true
 	
 
 
 func _on_bullets_eating_area_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
+	if bullets < max_bullets:
+		area.queue_free()
+		bullets += 1
+	print(bullets)

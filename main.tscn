@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b2s21onijqwbx" path="res://packman.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://74bg08cx2crd" path="res://icon.svg" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dcte458lgy8er" path="res://boss_bullet.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node2D" unique_id=1574452727]
 
@@ -14,3 +15,21 @@ texture = ExtResource("2_0xm2m")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1256412680]
 zoom = Vector2(0.75, 0.75)
+
+[node name="Boss_bullet" parent="." unique_id=2035957665 instance=ExtResource("3_h2yge")]
+position = Vector2(160, 276)
+
+[node name="Boss_bullet2" parent="." unique_id=373931972 instance=ExtResource("3_h2yge")]
+position = Vector2(274, 276)
+
+[node name="Boss_bullet3" parent="." unique_id=803967656 instance=ExtResource("3_h2yge")]
+position = Vector2(414, 283)
+
+[node name="Boss_bullet4" parent="." unique_id=2128088386 instance=ExtResource("3_h2yge")]
+position = Vector2(551, 276)
+
+[node name="Boss_bullet5" parent="." unique_id=1057120302 instance=ExtResource("3_h2yge")]
+position = Vector2(628, 279)
+
+[node name="Boss_bullet6" parent="." unique_id=1821271057 instance=ExtResource("3_h2yge")]
+position = Vector2(775, 269)
