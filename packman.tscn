@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b2s21onijqwbx"]
+
+[ext_resource type="Script" uid="uid://bhhs63yvkrw2n" path="res://packman.gd" id="1_hka3a"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hka3a"]
+width = 128
+height = 128
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_x6jed"]
+width = 256
+height = 256
+
+[node name="Packman" type="CharacterBody2D" unique_id=1301623657]
+script = ExtResource("1_hka3a")
+
+[node name="Pack" type="Sprite2D" parent="." unique_id=727214580]
+texture = SubResource("NoiseTexture2D_hka3a")
+
+[node name="Shield" type="Sprite2D" parent="." unique_id=1216225154]
+modulate = Color(1, 1, 1, 0)
+texture = SubResource("NoiseTexture2D_x6jed")

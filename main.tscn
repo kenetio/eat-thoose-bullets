@@ -1,3 +1,16 @@
 [gd_scene format=3 uid="uid://coji86imjkmmr"]
 
+[ext_resource type="PackedScene" uid="uid://b2s21onijqwbx" path="res://packman.tscn" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://74bg08cx2crd" path="res://icon.svg" id="2_0xm2m"]
+
 [node name="Main" type="Node2D" unique_id=1574452727]
+
+[node name="Packman" parent="." unique_id=1301623657 instance=ExtResource("1_ig7tw")]
+position = Vector2(0, 275)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=700968161]
+position = Vector2(738, 384)
+texture = ExtResource("2_0xm2m")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1256412680]
+zoom = Vector2(0.75, 0.75)
