@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://m45bqb6guf8x"
+=======
+uid="uid://0duo48wef73"
+>>>>>>> Alexandrov
 path="res://.godot/imported/Анимация4.png-6228448c1c7d9a9dbf52301cbb803190.ctex"
 metadata={
 "vram_texture": false
