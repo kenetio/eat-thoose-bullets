@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://b2s21onijqwbx"]
 
 [ext_resource type="Script" uid="uid://bhhs63yvkrw2n" path="res://packman.gd" id="1_hka3a"]
+[ext_resource type="Texture2D" uid="uid://dl10a8mr4l412" path="res://images/пакман/Анимация1.png" id="2_sr2kd"]
+[ext_resource type="Texture2D" uid="uid://bwqma4g4bf7d3" path="res://images/пакман/Анимация2.png" id="3_y622x"]
+[ext_resource type="Texture2D" uid="uid://dhbkbc2ckap7w" path="res://images/пакман/Анимация3.png" id="4_vylnx"]
+[ext_resource type="Texture2D" uid="uid://0duo48wef73" path="res://images/пакман/Анимация4.png" id="5_58we8"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hka3a"]
 width = 128
@@ -10,12 +14,59 @@ height = 128
 width = 256
 height = 256
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_hka3a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sr2kd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y622x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vylnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_58we8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vylnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y622x")
+}],
+"loop": true,
+"name": &"Eating",
+"speed": 8.0
+}]
+
 [node name="Packman" type="CharacterBody2D" unique_id=1301623657]
 script = ExtResource("1_hka3a")
 
 [node name="Pack" type="Sprite2D" parent="." unique_id=727214580]
+visible = false
 texture = SubResource("NoiseTexture2D_hka3a")
 
 [node name="Shield" type="Sprite2D" parent="." unique_id=1216225154]
+visible = false
 modulate = Color(1, 1, 1, 0)
 texture = SubResource("NoiseTexture2D_x6jed")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=364272451]
+visible = false
+modulate = Color(0, 0.8980392, 0.9607843, 1)
+anchors_preset = -1
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = -80.0
+offset_right = 60.0
+offset_bottom = -68.0
+grow_horizontal = 2
+value = 100.0
+show_percentage = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=280315759]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_hka3a")
+animation = &"Eating"
+autoplay = "Eating"

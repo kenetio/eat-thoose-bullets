@@ -19,21 +19,27 @@ func _physics_process(_delta: float) -> void:
 func move() -> void:
 	var dirx : int = Input.get_axis("A", "D")
 	var diry : int = Input.get_axis("W", "S")
-	if dirx and diry:
-		velocity.x = speed*dirx*0.8
-		velocity.y = speed*diry*0.8
-		lastdirx = dirx
-		lastdiry = diry
-	elif diry:
+	$AnimatedSprite2D.play("Eating")
+	if diry:
 		velocity.y = speed*diry
 		velocity.x = 0
 		lastdiry = diry
 		lastdirx = 0
-	elif dirx:
+		$AnimatedSprite2D.rotation = deg_to_rad(90*lastdirx)
+		if diry<0:
+			$AnimatedSprite2D.flip_h = true
+		else:
+			$AnimatedSprite2D.flip_h = false
+	if dirx:
 		velocity.x = speed*dirx
 		velocity.y = 0
 		lastdirx = dirx
 		lastdiry = 0
+		$AnimatedSprite2D.rotation = deg_to_rad(0)
+		if dirx<0:
+			$AnimatedSprite2D.flip_h = true
+		else:
+			$AnimatedSprite2D.flip_h = false
 	if Input.is_action_just_pressed("Space"):
 		shield()
 	if Input.is_action_just_pressed("Esc"):
@@ -42,12 +48,8 @@ func move() -> void:
 
 func pause() -> void:
 	if Input.is_action_just_pressed("Esc"):
-		if (abs(lastdirx)+abs(lastdiry)) > 1:
-			velocity.x = speed*lastdirx*0.8
-			velocity.y = speed*lastdiry*0.8
-		else:
-			velocity.x = speed*lastdirx
-			velocity.y = speed*lastdiry
+		velocity.x = speed*lastdirx
+		velocity.y = speed*lastdiry
 		move_and_slide()
 		state = 1
 
@@ -58,3 +60,6 @@ func shield() -> void:
 	$Shield.modulate = Color(0.0, 0.0, 0.0, 1.0)
 	var untwin : Tween = get_tree().create_tween()
 	untwin.tween_property($Shield, 'modulate:a', 0, 0.3)
+	$ProgressBar.value = 100
+	$ProgressBar.visible = true
+	
