@@ -1,11 +1,47 @@
 [gd_scene format=3 uid="uid://coji86imjkmmr"]
 
+<<<<<<< HEAD
 [ext_resource type="PackedScene" path="res://packman.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://74bg08cx2crd" path="res://icon.svg" id="2_0xm2m"]
 [ext_resource type="AudioStream" uid="uid://cnm7yhbke8bks" path="res://untitled.mp3" id="3_h2yge"]
 
 [node name="Main" type="Node2D" unique_id=1574452727]
 
+=======
+<<<<<<< Updated upstream
+[ext_resource type="AudioStream" uid="uid://ds58jv5317ukc" path="res://sound/sound.mp3" id="1_ig7tw"]
+=======
+[ext_resource type="PackedScene" path="res://packman.tscn" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://74bg08cx2crd" path="res://icon.svg" id="2_0xm2m"]
+>>>>>>> Stashed changes
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0xm2m"]
+particle_flag_disable_z = true
+angular_velocity_min = -85.16001
+angular_velocity_max = -1.6093254e-05
+orbit_velocity_min = -0.3009999
+orbit_velocity_max = 0.3870001
+gravity = Vector3(0, 98, 0)
+scale_min = 93.31
+scale_max = 108.689995
+turbulence_enabled = true
+turbulence_noise_strength = 19.45
+
+[node name="Main" type="Node2D" unique_id=1574452727]
+
+<<<<<<< Updated upstream
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1457304946]
+stream = ExtResource("1_ig7tw")
+autoplay = true
+=======
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1784094179]
+position = Vector2(2.000122, 1207)
+scale = Vector2(10, 10)
+amount = 200
+lifetime = 8.27
+process_material = SubResource("ParticleProcessMaterial_0xm2m")
+
+>>>>>>> kenetivaaa
 [node name="Packman" parent="." unique_id=1301623657 instance=ExtResource("1_ig7tw")]
 position = Vector2(0, 275)
 
@@ -15,8 +51,12 @@ texture = ExtResource("2_0xm2m")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1256412680]
 zoom = Vector2(0.75, 0.75)
+<<<<<<< HEAD
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=527031261]
 stream = ExtResource("3_h2yge")
 autoplay = true
 parameters/looping = false
+=======
+>>>>>>> Stashed changes
+>>>>>>> kenetivaaa
