@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://p54twduilwjq"]
+=======
+[gd_scene format=3 uid="uid://dy1e66t6ndb8m"]
+>>>>>>> Stashed changes
 
 [sub_resource type="Curve" id="Curve_68pu4"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.80508476, 0.83934087), -0.7618964, -0.7618964, 0, 0, Vector2(1, 0.009268761), -13.842194, 0.0, 0, 0]
