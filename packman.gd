@@ -48,6 +48,7 @@ func move() -> void:
 	if Input.is_action_just_pressed("Space"):
 		shield()
 	if Input.is_action_just_pressed("Esc"):
+		$AnimatedSprite2D.stop()
 		state = 2
 	move_and_slide()
 
@@ -56,6 +57,7 @@ func pause() -> void:
 		velocity.x = speed*lastdirx
 		velocity.y = speed*lastdiry
 		move_and_slide()
+		$AnimatedSprite2D.play("Eating")
 		state = 1
 
 func cutscene() -> void:
